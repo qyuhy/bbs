@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div id="wrap" class="wrap">
+
+    </div>
+    <script>
+        var getQuery = function () {
+            alert("0")
+        };
+        var dom = document.getElementById("wrap");
+        dom.innerHTML = foo();
+        function foo () {
+            if (true) {
+                return '<h3 class="title" onclick="getQuery()">登陆界面</h3>';
+            }
+        }
+        var getUrlParam = function (name) {
+            var urls = document.location.href || '',
+                re = new RegExp("(\\\?|&)" + name + "=([^&]+)(&|$)", "i"),
+                m = urls.match(re);
+            if (m) return m[2];
+            return '';
+        };
+        var s = getUrlParam("name");
+        console.log(s);
+
+    </script>
+</body>
+</html>
